@@ -5,6 +5,17 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+<script type='application/javascript'>
+    // Send the POST when the page is loaded,
+    // which will replace this whole page with the retrieved image.
+    function loadGraph() {
+      var frm = document.getElementById('post_form');
+      if (frm) {
+       frm.submit();
+      }
+    }
+  </script>
+
 	<head>
 		<title>ETRA by GTO</title>
 		<meta charset="utf-8" />
@@ -29,7 +40,7 @@
 									<li><a href="contact.html">Registro</a></li>
 									<li><a href="elements.html">Recompensas</a></li>
 									<li>
-										<a href="#">xxx</a>
+										<a href="#">Submenu</a>
 										<ul>
 											<li><a href="#">Option One</a></li>
 											<li><a href="#">Option Two</a></li>
@@ -50,9 +61,25 @@
 					<p>Conéctate con el arte.</p>
 					<ul class="actions">
 						<li><a href="contact.html" class="button special">Regístrate aquí</a></li>
-						<li><a href="generic.html" class="button">Recompensas</a></li>
+						<li><a href="elements.html" class="button">Recompensas</a></li>
 					</ul>
 				</section>
+
+
+
+
+
+				<form action='https://chart.googleapis.com/chart' method='POST'>
+				  <input type='hidden' name='cht' value='qr' />
+				  <input type='hidden' name='chs' value='300x300' />
+				  <input type='hidden' name='chl' value='This is my QR code'/>
+				  <input type='submit'  />
+				</form>
+
+
+
+
+
 
 			<!-- Main -->
 				<section id="main" class="container">
@@ -95,7 +122,15 @@
 							</section>
 						</div>
 					</section>
-
+					<sextion>
+						<form action='https://chart.googleapis.com/chart' method='POST' id='post_form'
+          onsubmit="this.action = 'https://chart.googleapis.com/chart?chid=' + (new Date()).getMilliseconds(); return true;">  <input type='hidden' name='cht' value='qr' />
+      <input type='hidden' name='cht' value='qr' />
+      <input type='hidden' name='chs' value='300x300' />
+      <input type='hidden' name='chl' value='This is my QR code' />
+      <input type='submit'  />
+    </form>
+				</section>
 					<div class="row">
 						<div class="6u 12u(narrower)">
 
@@ -156,7 +191,7 @@
 						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net"></a></li>
+							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="#"GTO</a></li>
 					</ul>
 				</footer>
 
